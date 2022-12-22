@@ -151,9 +151,7 @@ li{list-style-type:none}ul{margin-left:0;padding-left:0}*,*::before,*::after{box
 		margin-left: 10px;
 		display: flex;
 		justify-content: space-between;
-	
 		color: wheat;
-	
 	}
 
 
@@ -171,8 +169,8 @@ body._lock{
 }
 @media (max-width: 750px){
 	.dropdown-content {
-		width: 220px;
-		margin-left: -45px;
+		width: 255px;
+		margin-left: -65px;
 	
 	}
 	.logo{

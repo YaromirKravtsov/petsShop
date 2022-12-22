@@ -23,4 +23,5 @@ if(window.screen.width <=1100){
 		}else	document.querySelector('.dropdown-content').style.display = "none"
 
 
-});}
+	});	
+}

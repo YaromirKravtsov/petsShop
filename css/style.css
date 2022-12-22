@@ -550,6 +550,7 @@ footer{
 		width:35px;
 		height: 35px;
 		margin-right: 15px;	
+		margin-left: -10px;
 	}
 	.email>img{
 		width: 40px;

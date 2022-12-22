@@ -1,505 +1,112 @@
-li{list-style-type:none}ul{margin-left:0;padding-left:0}*,*::before,*::after{box-sizing:border-box}ul[class],ol[class]{padding:0}a{text-decoration:none;color:#000}a[x-apple-data-detectors]{color:inherit!important;text-decoration:none!important;font-size:inherit!important;font-family:inherit!important;font-weight:inherit!important;line-height:inherit!important}input{border:none;outline:none}body,h1,h2,h3,h4,p,ul[class],ol[class],li,figure,figcaption,blockquote,dl,dd{margin:0}body{min-height:100vh;scroll-behavior:smooth;text-rendering:optimizeSpeed;line-height:1.5}ul[class],ol[class]{list-style:none}a:not([class]){text-decoration-skip-ink:auto}input,button,textarea,select{font:inherit}
-   /* --------------------------------------------------------- */
-   /* --------------------------------------------------------- */
- .wraper{
-	min-width: 100%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
-	font-family: 'Nunito', sans-serif;
-}
-.container{
-	width: 85%;
-}
-.header {
-	width: 100%;	
-	top: 0;
-	left: 0;
-	display: flex;
-	justify-content: center;
-	height: 65px;
-	background: #fff;
-	background-size: 100% 200px;
-	z-index: 5;
-	margin-top: 0px;
-	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-
-.logo{
-	width: 120px;
-	height: 120px;
-	margin-top: -60px;
-}
-.header__bottom{
-	height: 100%;
-	display: flex;
-	align-items: center;
-
-}
-
-.menu__icon {
-		display: none;
-}
-
-.menu__list > li{
-	position: relative;
-	font-size: 16.7px;
-	line-height: 1.2;
-	font-weight: 700;
-	letter-spacing: 0.2em;
-	color: #54524f;
-}	
-
-.menu__link {
-	color: #000;
-	font-size: 18px;
-	font-family: 'Nunito';
-	font-style: normal;
-	font-weight: 700;
-	font-size: 18px;
-	line-height: 35px;
-	color: #A422BB;
-}
-.menu__link>img{
-	width: 17.5px;
-	height: 7px;
-}
-
-.dropbtn {
-    color: #A422BB;
-}
-
-.dropdown {
-    position: relative;
-    display: inline-block;
-
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #fff;
-    width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-	margin-left: -25px;
-
-}
-
-.dropdown-content a {
-	text-align: center;
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-
-}
-
-.dropdown-content a:hover {background-color: #ddd;}
-
-.dropdown:hover .dropdown-content {display: block;}
-
-.header-up__row > img{
-	z-index: 10;
-	width: 80px;
-	height: 80px;
-	margin-top: 60px;
-}
-
-@media (min-width: 1100px){
-	.last-link{
-		margin-left: 50px; 
-	}
-	.menu__list {
-		width: 100%;
-		display: flex;
-		flex-direction: row;
-		align-items: center;
-		justify-content: space-around;		
-	}
-	.menu__body{
-		width: 75%;
-		margin-left: 30px;
-		display: flex;
-		justify-content: space-between;
-	
-		color: wheat;
-	
-	}
-
-
-}
-
-body._lock{
-	overflow: hidden;
-}
-
-@media (max-width: 520px){
-	.header-up__row > p {
-		display: none;
-	}
-}
-@media (max-width: 1100px){
-	.logo{
-		display: none;
-	}
-	.header-up__row > img {
-		z-index: 0;
-	}
-	.dropdown {
-		font-size: 24px;
-	}
-	body > div > header > div > div > nav > ul > li:nth-child(2) > img{
-		width: 17px;
-		height: 10px;
-		margin-top:5px;
-		margin-left: 5px;
-	}
-	.logo{
-		width: 120px;
-		height: 120px;
-	}
-	.header{
-		justify-content: space-between;
-		height: 130px;
-		background: url('../img/bac_header.png') no-repeat;
-		background-size: 100% 100%;
-	}
-	.menu__list >li {
-		display: flex;
-		justify-content: center;
-    
-	}
-
-
-	.menu__icon {
-		z-index: 5;
-		display: block;
-		position: relative;
-		width: 30px;
-		height: 18px;
-		cursor: pointer;
-		margin-left: 20px;
-
-}
-.menu__icon span,
-.menu__icon::before,
-.menu__icon::after {
-	 left: 0;
-	 position: absolute;
-	 height: 10%;
-	 width: 100%;
-	 transition:all 0.3s ease 0s;
-	 background-color: #A422BB;
-
-}
-.menu__icon::before,
-.menu__icon::after {
-	content: "";
-}
-.menu__icon::after {
-	top: 0;
-}
-.menu__icon::before {
-	bottom: 0;
-}
-.menu__icon span{
-	top: 50%;	
-	transform: scale(1) translate(0px,-50%);
-}
-
-.menu__icon._active span{
-	transform: scale(0) translate(0px,-50%);
-}
-.menu__icon._active::before{
-	top: 50%;
-	transform: rotate(-45deg) translate(0px,-50%);
-}
-.menu__icon._active::after{
-	top: 45%;
-	transform: rotate(45deg) translate(0px,50%);
-}
-.menu__body{
-	position: fixed;
-	top: 0;
-	left: -100%;
-	width: 100%;
-	height: 100%;
-	
-	background-color: #fff;
-	padding: 100px 30px 30px 30px;
-	transition: left 0.3s ease 0s;
-	overflow: auto;
-}
-.menu__body._active{
-	left: 0%;
-}
-
-.menu__list >li {
-	flex-wrap: wrap;
-	margin: 0px 0px 30px 0px;
-}
-.menu__list >li:last-child{
-	margin-bottom: 0;
-}
-.menu__list >li._active .menu__sub-list{
-display: block;
-}
-.menu__link{
-	font-size: 24px;	
-}	
-} 
-/* -------------------------------------------------------------------- */
-.upBoard{
-	width: 100%;
-	height: 35px;
-	background: url(../img/UpHeader.png);
-}
-
-.header-up {
-	width: 100%;
-	height: 65px;
-	background-color: #FD9BD7;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-.header-up__row{
-	display: flex;
-	align-items: center;
-	float:right
-}
-
-.header-up__row > p{
-	font-family: 'Nunito';
-	font-weight: 700;
-	font-size: 20px;
-	line-height: 35px;
-	color: #FFFFFF;
-	font-family: 'Nunito', sans-serif;
-	margin-right: 100px;
-
-}
-.header-up__row > p > img{
-	width: 40px;
-	height: 20px;
-	margin-top: -100px;
-}
-
-@media(max-width:1100px){
-
-	.header {
-		height: 60px;
-	}
-}
-@media(max-width:610px){
-	.header-up__row > p{
-		margin-right: 60px;
-	}
-}
-@media(max-width:552px){
-	.header-up__row > p{
-		font-size: 18px;
-	}
-}
-/* -------------------------------------------------------------------- */
-.content {
-	width: 100%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-
-}
-
-.content__row {
-	display: flex;
-	justify-content: space-between;
-	flex-wrap: wrap;
-}
-.card {
-	display: flex;
-	align-items: center;
-	flex-direction: column;
-	height: 600px;
-	border:  2px solid #DDE1E2;
-	margin:35px;
-	margin-top: 100px;
-}
-.card> h2{
-	 margin-top: 30px;
-	font-family: 'Poppins', sans-serif;
-	font-weight: 400;
-	font-size: 28px;
-	line-height: 35px;
-	color: #9C9C9C;
-}
-.card> p{
-	margin-top: 10px;
-	font-family: 'Poppins';
-	font-style: normal;
-	font-weight: 400;
-	font-size: 24px;
-	line-height: 35px;
-	color: #000000;
-}
-.card-button {
-	margin-top: 20px;
-	width: 260px;
-	height: 50px;
-	background-color: #FD9BD7;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	font-family: 'Nunito';
-	font-style: normal;
-	font-weight: 700;
-	font-size: 20px;
-	line-height: 35px;
-	color: #FFFFFF;
-	border-radius: 10px;
-}
-@media(max-width:995px){
-
-	.content__row {
-		justify-content: center;
-	}
-}
-/*  */
-footer{
-	width: 100%;
-	background-color: #FD9BD7;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	margin-top: 130px;
-}
-
-.footer__row {
-	display: flex;
-	justify-content: space-between;
-	flex-direction: row;
-	margin-top: 53px;
-	margin-bottom: 85px;
-}
-.footer__column1 >img{
-	width: 710px;
-	height: 415px;
-
-}
-.footer__column2 {
-	width: 455px;
-	display: flex;
-	flex-direction: column;
-
-}
-.footer__column2 >h2 {
-	font-family: 'Poppins', sans-serif;
-	font-weight: 600;
-	font-size: 40px;
-	line-height: 35px;
-	color: #fff;
-	text-align: center;
-}
-.footer__column2 >p {
-	text-align: center;
-	font-family: 'Nunito';
-	font-style: normal;
-	font-weight: 700;
-	font-size: 35px;
-	line-height: 35px;
-	color: #FFFFFF;
-	margin-top: 50px;
-	margin-bottom: 60px;
-}
-.telefon,.email{
-	display: flex;
-	flex-direction: row;
-	height: 40px;
-	align-items: center;
-}
-.telefon>img{
-		width:40px;
-		height: 40px;
-		margin-right: 30px;
-}
-.email>img{
-	width: 45px;
-	height: 45px;
-	margin-right: 30px;
-	margin-left: -2.5px;
-}
-.email{
-		margin-top: 30px;
-	}
-.email>a{
-	font-family: 'Nunito';
-	font-style: normal;
-	font-weight: 600;
-	font-size: 33.5px;
-	line-height: 70px;
-	color: #FFFFFF;
-}
-.telefon>a{
-	font-style: normal;
-	font-weight: 700;
-	font-size: 31px;
-	line-height: 70px;
-	letter-spacing: 0.11em;
-	color: #FFFFFF;
-}
-@media (max-width: 1395px){
-	.footer__row{
-	display: flex;
-	justify-content: center;
-	flex-direction: column;
-	align-items: center;
-	}
-	.footer__column2 {
-		margin-top: 60px;
-	}
-	.footer__column1 {
-		margin-top: 60px;
-	}
-}
-@media (max-width: 780px){
-	.footer__column1 >img{
-		width: 510px;
-		height: 315px;
-	}
-}
-@media (max-width: 550px){
-	.footer__column1 >img{
-		width: 350px;	
-		height: 225px;
-	}
-	.email>a{
-		font-size: 28px;
-	}
-	.telefon>a{
-		font-size: 27px;
-	}
-	.telefon>img{
-		width:35px;
-		height: 35px;
-		margin-right: 15px;
-	}
-	.email>img{
-		width: 40px;
-		height: 40px;
-		margin-right: 15px;
-	}
-	.footer__column2 {
-		justify-content: center;
-		align-items: center;
-	}
-	.footer__column2 >h2 {
-		font-weight: 600;
-		font-size: 40px;
-	}
-	.footer__column2 >p {
-		font-size: 28px;
-		margin-top: 30px;
-		width: 380px;
-	}
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <div class="wraper">
+        <div class="upBoard"></div>
+        <div class="header-up">
+            <div class="container">
+                <div class="header-up__row">
+                    <p>Наближаємо перемогу разом! <div class="hearts"></div></p>
+                    <img src="img/basket.png" alt="">
+                </div>
+            </div>
+        </div>
+        <header class="header">
+            <div class="container">
+                    <div class="header__bottom ">
+                        <div class="menu__icon"><span></span></div>
+                      
+                            <img src="img/logo1.png" alt="" class="logo">
+                    
+                            <nav class="menu__body">
+                                <ul class="menu__list">
+                                    <li><a href="#" class="menu__link">Популярнi товари</a></li>
+                                    <li><div class="dropdown">
+                                        <div class="dropbtn">Іграшки</div>
+                                        <div class="dropdown-content">
+                                          <a href="#">Iнтерактивні</a>
+                                          <a href="#">Електричні</a>
+                                          <a href="#">Котяча м'ята</a>
+                                        </div>
+                                      </div> <img src="img/arrow.png" alt=""></li>
+                                    <li><a href="#" class="menu__link">Догляд</a></li> 
+                                    <li><a href="#" class="menu__link">Посуд</a></li> 
+                                    <li><a href="#" class="menu__link">Їжа</a></li> 
+                                </ul> 
+                            
+                            </nav> 
+                    </div>
+            </div>
+       </header>
+           <div class="content">
+            <div class="container">
+                <div class="content__row">
+                    <div class="card">
+                            <img src="img/card-img.png" alt="">
+                            <h2>Котяча м'ята в кульках </h2>
+                            <p>250 грн/кулька</p>
+                            <div class="card-button">Додати в кошик</div>
+                    </div>
+                    <div class="card">
+                        <img src="img/card-img.png" alt="">
+                        <h2>Котяча м'ята в кульках </h2>
+                        <p>250 грн/кулька</p>
+                        <div class="card-button">Додати в кошик</div>
+                    </div>
+                    <div class="card">
+                    <img src="img/card-img.png" alt="">
+                    <h2>Котяча м'ята в кульках </h2>
+                    <p>250 грн/кулька</p>
+                    <div class="card-button">Додати в кошик</div>
+                    </div>
+                    <div class="card">
+                <img src="img/card-img.png" alt="">
+                <h2>Котяча м'ята в кульках </h2>
+                <p>250 грн/кулька</p>
+                <div class="card-button">Додати в кошик</div>
+                    </div>
+                     <div class="card">
+            <img src="img/card-img.png" alt="">
+            <h2>Котяча м'ята в кульках </h2>
+            <p>250 грн/кулька</p>
+            <div class="card-button">Додати в кошик</div>
+                    </div>
+                    <div class="card">
+                        <img src="img/card-img.png" alt="">
+                        <h2>Котяча м'ята в кульках </h2>
+                        <p>250 грн/кулька</p>
+                        <div class="card-button">Додати в кошик</div>
+                    </div>
+                </div>
+            </div>
+           </div>
+           <footer>
+            <div class="container">
+                <div class="footer__row">
+                    <div class="footer__column1">
+                        <img src="img/logo2.png" alt="">
+                    </div>
+                    <div class="footer__column2">
+                        <h2>Про нас</h2>
+                        <p>Магазин для просунутих котобатьків. Ексклюзивні товари, які не знайдеш <br>    на полицях звичайних зоо.</p>
+                        <div class="telefon"><img src="img/telefon.png" alt=""> <a href="tel:+380982065957">+ 380 (98) 206 59 57</a></div>
+                        <div class="email"><img src="img/email.png" alt=""> <a href = "mailto: kotyatashop@gmail.com ">kotyatashop@gmail.com</a></div> 
+                    </div>
+                </div>
+            </div>
+           </footer>
+    </div>
+    <script src="js/scrypt.js"></script>
+</body>
+</html>

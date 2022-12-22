@@ -14,6 +14,7 @@ li{list-style-type:none}ul{margin-left:0;padding-left:0}*,*::before,*::after{box
 .container{
 	width: 85%;
 }
+
 .header {
 	width: 100%;	
 	top: 0;
@@ -26,6 +27,7 @@ li{list-style-type:none}ul{margin-left:0;padding-left:0}*,*::before,*::after{box
 	z-index: 5;
 	margin-top: 0px;
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	margin-bottom: 50px;
 }
 
 .logo{
@@ -108,8 +110,32 @@ li{list-style-type:none}ul{margin-left:0;padding-left:0}*,*::before,*::after{box
 	height: 80px;
 	margin-top: 60px;
 }
-
-@media (min-width: 1100px){
+@media (max-width: 950px){
+.header__bottom {
+    margin-right: 20px;
+}
+.container{
+	width: 95%;
+}
+.logo {
+    width: 90px;
+    height: 90px;
+    margin-top: -60px;
+}
+.menu__list> li> img{
+	width: 15px;
+	height: 7px;
+	margin-left: 3px;
+	margin-top: 12px;	
+}
+.header-up__row > img {
+ 
+    width: 70px;
+    height: 70px;
+   
+}
+}
+@media (min-width: 750px){
 	.last-link{
 		margin-left: 50px; 
 	}
@@ -120,9 +146,9 @@ li{list-style-type:none}ul{margin-left:0;padding-left:0}*,*::before,*::after{box
 		align-items: center;
 		justify-content: space-around;		
 	}
-	.menu__body{
+	.menu__body {
 		width: 75%;
-		margin-left: 30px;
+		margin-left: 10px;
 		display: flex;
 		justify-content: space-between;
 	
@@ -143,7 +169,7 @@ body._lock{
 			margin-right:0px;
 		}
 }
-@media (max-width: 1100px){
+@media (max-width: 750px){
 	.dropdown-content {
 		width: 220px;
 		margin-left: -45px;
@@ -158,7 +184,7 @@ body._lock{
 	.dropdown {
 		font-size: 24px;
 	}
-	body > div > header > div > div > nav > ul > li:nth-child(2) > img{
+	.dropdown > img{
 		width: 17px;
 		height: 10px;
 		margin-top:5px;
@@ -173,6 +199,7 @@ body._lock{
 		height: 130px;
 		background: url('../img/bac_header.png') no-repeat;
 		background-size: 100% 100%;
+	
 	}
 	.menu__list >li {
 		display: flex;
@@ -342,17 +369,22 @@ display: block;
 
 .content__row {
 	display: flex;
-	justify-content: center;
+	justify-content: space-between;
 	flex-wrap: wrap;
 }
+
 .card {
 	display: flex;
 	align-items: center;
 	flex-direction: column;
 	height: 600px;
+	width:350px;
 	border:  2px solid #DDE1E2;
-	margin:35px;
-	margin-top: 100px;
+	margin:  50px 40px;
+	
+}
+.container-card{
+	width: 89%;
 }
 .card> h2{
 	 margin-top: 30px;
@@ -361,6 +393,12 @@ display: block;
 	font-size: 28px;
 	line-height: 35px;
 	color: #9C9C9C;
+}
+.card > .img{
+	width:350px;
+	 height: 370px;
+	background:url('../img/card-img.png')  no-repeat;
+	background-size: 350px 370px;
 }
 .card> p{
 	margin-top: 10px;
@@ -387,14 +425,14 @@ display: block;
 	color: #FFFFFF;
 	border-radius: 10px;
 }
-@media(max-width:995px){
+@media(max-width: 950px){
 
 	.content__row {
 		justify-content: center;
 	}
 	
 }
-
+/* ---------------------------------------------------------------------------- */
 footer{
 	width: 100%;
 	background-color: #FD9BD7;
@@ -503,15 +541,17 @@ footer{
 		height: 225px;
 	}
 	.email>a{
-		font-size: 28px;
+		font-size: 25px;
 	}
 	.telefon>a{
-		font-size: 27px;
+		font-size: 24px;
 	}
 	.telefon>img{
 		width:35px;
 		height: 35px;
 		margin-right: 15px;
+		margin-left: 10px;
+		
 	}
 	.email>img{
 		width: 40px;

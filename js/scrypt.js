@@ -25,3 +25,31 @@ if(window.screen.width <=1100){
 
 	});	
 }
+
+const basket = document.getElementById("basket");
+const continueBuy= document.getElementById("continue");
+
+
+basket.addEventListener("click", () =>{
+	document.querySelector(".basket-wraper").style.display = "flex";
+	if(window.screen.width>=780){
+		document.querySelector(".basket-desktop").style.display = "flex";
+		document.querySelector(".basket-mobile").style.display = "none";
+		
+	}else {
+		document.querySelector(".basket-desktop").style.display = "none";
+		document.querySelector(".basket-mobile").style.display = "flex";
+	}
+	
+	if(window.screen.width>=780)document.body.style.overflowY = "hidden";
+	else document.body.style.overflowY = "auto";
+});
+
+document.getElementById("continue").addEventListener("click", () =>{
+	document.querySelector(".basket-wraper").style.display = "none";
+	document.body.style.overflowY = "auto";
+});
+document.getElementById("continue1").addEventListener("click", () =>{
+	document.querySelector(".basket-wraper").style.display = "none";
+	document.body.style.overflowY = "auto";
+});

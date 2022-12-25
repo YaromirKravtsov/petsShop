@@ -12,13 +12,69 @@
     <title>Document</title>
 </head>
 <body>
+    <div class="basket-wraper"> 
+            <div class="basket-desktop">
+                 <div class="basket__row">
+                <div class="basket__titles">
+                    <div class="basket__titles-name">Товар</div>
+                    <div class="basket__titles-price">Ціна / ₴</div>
+                    <div class="basket__titles-quantity">Кількість</div>   
+                    <div class="basket__titles-totalPrice">Загальна ціна / ₴</div>
+                    <div class="basket__titles-delete">Видалити</div>
+
+                </div>
+                <div class="basket-line"></div>
+                <div class="basket__cards"></div>
+              <div class="basket-line"></div>
+                <div class="basket__total">
+                 
+                        <div class="basket__total-prise" >Загальна вартість: 0 ₴</div>
+                        <div class="basket__total-quantity" id="totalQuantity">Усього товарів: 1</div>
+             
+                </div>
+                <div class="basket-line"></div>
+                 
+                 <div class="basket__form">
+                    <div class="basket__form-column1">
+                        <input class = "input"  type="text" placeholder="Введіть ПІБ">
+                        <input class = "input"  type="text" placeholder="Введіть номер телефону">
+                    </div>
+                    <div class="basket__form-column2">
+                        <input class= "input"  type="text" placeholder="Введіть електронну пошту">
+                        <div class="basket__form__button-row">
+                            <div class="basket__form__button" id="continue">Продовжити покупки</div>
+                            <div class="basket__form__button" id="send">Зробити замовлення</div>
+                        </div>
+                    </div>
+                 </div>
+                </div>
+            </div>
+            <div class="basket-mobile">
+                <h2>Кошик</h2>
+                <div class="basket-line-mobile"></div>
+                <div class="basket__row-mobile">
+                
+              </div> 
+                <div class="basket-line-mobile"></div>
+                <div class="basket-mobile-down-row">
+                    <div class="basket-mobile__total"><div class="basket-mobile__total-prise">Загальна вартість: <br> 0 ₴</div><div class="basket-mobile__total-count">Усього товарів: <br> 0</div></div>
+                    <div class="basket-line-mobile"></div>
+                    <div class="basket-mobile-button" id="continue1">Продовжити покупки</div>
+                    <input type="text" class="basket-mobile-input" placeholder="Введіть ПІБ">
+                    <input type="text" class="basket-mobile-input" placeholder="Введіть номер телефону">
+                    <input type="text" class="basket-mobile-input" placeholder="Введіть електронну пошту">
+                    <div class="basket-mobile-button">Зробити замовлення</div>
+                </div>
+            </div>
+    </div>
     <div class="wraper">
+   
         <div class="upBoard"></div>
         <div class="header-up">
             <div class="container">
                 <div class="header-up__row">
                     <p>Наближаємо перемогу разом! <div class="hearts"></div></p>
-                    <img src="img/basket.png" alt="">
+                    <img id="basket" src="img/basket.png" alt="">
                 </div>
             </div>
         </div>
@@ -27,22 +83,22 @@
                     <div class="header__bottom ">
                         <div class="menu__icon"><span></span></div>
                       
-                            <img src="img/logo1.png" alt="" class="logo">
+                            <a href="index.html"><img src="img/logo1.png" alt="" class="logo"></a>
                     
                             <nav class="menu__body">
                                 <ul class="menu__list">
-                                    <li><a href="#" class="menu__link">Популярнi товари</a></li>
+                                    <li id = "top"><a href="#" class="menu__link">Популярнi товари</a></li>
                                     <li><div class="dropdown">
-                                        <div class="dropbtn">Іграшки</div>
+                                        <div class="dropbtn" id="Toys">Іграшки</div>
                                         <div class="dropdown-content">
-                                          <a href="#">Iнтерактивні</a>
-                                          <a href="#">Електричні</a>
-                                          <a href="#">Котяча м'ята</a>
+                                          <a href="#" id="Interactive">Iнтерактивні</a>
+                                          <a href="#" id="Electrical">Електричні</a>
+                                          <a href="#" id="Catnip">Котяча м'ята</a>
                                         </div>
                                       </div> <img src="img/arrow.png" alt=""></li>
-                                    <li><a href="#" class="menu__link">Догляд</a></li> 
-                                    <li><a href="#" class="menu__link">Посуд</a></li> 
-                                    <li><a href="#" class="menu__link">Їжа</a></li> 
+                                    <li><a href="#" id="Care" class="menu__link">Догляд</a></li> 
+                                    <li><a href="#" id="dishes" class="menu__link">Посуд</a></li> 
+                                    <li><a href="#" id="food" class="menu__link">Їжа</a></li> 
                                 </ul> 
                             
                             </nav> 
@@ -52,52 +108,6 @@
            <div class="content">
             <div class="container-card">
                 <div class="content__row">
-               
-                    <div class="card">
-                        <div class="img"></div>
-                       <h2>Котяча м'ята в кульках </h2>
-                       <p>250 грн/кулька</p>
-                       <div class="card-button">Додати в кошик</div>
-                    </div>
-                        <div class="card">
-                            <div class="img"></div>
-                           <h2>Котяча м'ята в кульках </h2>
-                           <p>250 грн/кулька</p>
-                           <div class="card-button">Додати в кошик</div>
-                        </div>
-                        <div class="card">
-                            <div class="img"></div>
-                           <h2>Котяча м'ята в кульках </h2>
-                           <p>250 грн/кулька</p>
-                           <div class="card-button">Додати в кошик</div>
-                        </div>
-                        <div class="card">
-                            <div class="img"></div>
-                           <h2>Котяча м'ята в кульках </h2>
-                           <p>250 грн/кулька</p>
-                           <div class="card-button">Додати в кошик</div>
-                        </div>
-           
-                        <div class="card">
-                            <div class="img"></div>
-                           <h2>Котяча м'ята в кульках </h2>
-                           <p>250 грн/кулька</p>
-                           <div class="card-button">Додати в кошик</div>
-                        </div>
-                        <div class="card">
-                            <div class="img"></div>
-                           <h2>Котяча м'ята в кульках </h2>
-                           <p>250 грн/кулька</p>
-                           <div class="card-button">Додати в кошик</div>
-                        </div>
-                        <div class="card">
-                            <div class="img"></div>
-                           <h2>Котяча м'ята в кульках </h2>
-                           <p>250 грн/кулька</p>
-                           <div class="card-button">Додати в кошик</div>
-                        </div>
-                 
-
                 </div>
             </div>
            </div>
@@ -116,7 +126,10 @@
                 </div>
             </div>
            </footer>
+
     </div>
     <script src="js/scrypt.js"></script>
+    <script src="js/Cards.js"></script>
+
 </body>
 </html>
